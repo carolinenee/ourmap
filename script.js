@@ -130,9 +130,77 @@ document.getElementById('prev-btn').addEventListener('click', () => {
 });
 
 document.getElementById('next-btn').addEventListener('click', () => {
+    // Check if we're on the last point
+    if (currentIndex === places.length - 1) {
+        // Show the completion popup
+        showCompletionPopup();
+    }
+    
     currentIndex = (currentIndex + 1) % places.length;
     updateDisplay();
 });
+
+// Function to show completion popup
+function showCompletionPopup() {
+    // Create popup HTML
+    const popupHTML = `
+        <div id="completion-popup" style="
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            z-index: 1000;
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+        ">
+            <button id="close-completion-popup" style="
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                background: none;
+                border: none;
+                font-size: 24px;
+                cursor: pointer;
+                color: #666;
+                padding: 5px 10px;
+            ">×</button>
+            <h2 style="color: #091453; margin-bottom: 15px;">Finito!</h2>
+            <p style="color: #333; line-height: 1.6;">
+                You Finished all ${places.length} places! But we both know there are many more... and there will be many more to come 💕
+                <img src="images/ActionShot.png" alt="Description" style="width: 80%; border-radius: 8px;">
+            </p>
+        </div>
+        
+        <div id="completion-overlay" style="
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.5);
+            z-index: 999;
+        "></div>
+    `;
+    
+    // Add popup to body
+    document.body.insertAdjacentHTML('beforeend', popupHTML);
+    
+    // Close button functionality
+    document.getElementById('close-completion-popup').addEventListener('click', closeCompletionPopup);
+    document.getElementById('completion-overlay').addEventListener('click', closeCompletionPopup);
+}
+
+function closeCompletionPopup() {
+    const popup = document.getElementById('completion-popup');
+    const overlay = document.getElementById('completion-overlay');
+    if (popup) popup.remove();
+    if (overlay) overlay.remove();
+}
 
 // Popup functionality
 document.getElementById('close-popup').addEventListener('click', () => {
