@@ -6,7 +6,7 @@
 
 #Titled {
     font-size: 50px;
-    font-family: 'Times New Roman', Times, serif;
+    justify-content: center;
     color: rgb(0, 0, 0);
     text-shadow: 2px 2px 2px rgb(176, 89, 184);
 }
