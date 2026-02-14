@@ -1,71 +1,12 @@
 .map-container {
-    position: absolute;
-    top: 12%; /* Distance from the top of the page */
-    bottom: 5%; /* Distance from the bottom of the page */
-    left: 15%; /*puts map in the middle (because it's at 70% size*/
-    width: 70%; /* makes the map take up 70% of screen*/
-    border-radius: 8px; /*rounds the edges pf the map*/
-    border: 1px solid #000000; /*adds a black outline on the map*/
-}
-#toggle-labels {
-    position: absolute;
-    top: 10%; /* Distance from the top of the page */
-    right: 4%; /* Distance from the right of the page */
-    padding: 10px; /* Padding inside the button */
-    background: #ffdefa; /* Button background color */
-    border: 1px solid #000000; /* Button border */
-    font-size: 20px; /* Font size */
-    border-radius: 5px; /* Rounded corners */
-    font-family: "Lobster";
-}
-#description {
-    position: absolute;
-    top: 15%;
-    left: 86%;
-    font-size: 20px;
-}
-#Titled {
-    position: absolute;
-    left: 35%;
-    font-size: 50px;
-    font-family: "Lobster"; /*the font*/
-    color: black;
-    text-shadow: 2px 2px 2px rgb(151, 220, 255);
-}
-
-.cafe-legend{
-    position: absolute;
-    background-color: whitesmoke;
-    top: 12%;
-    left: 1%;
-    margin: 0 10px 30px 0;
-    padding: 8px;
+    height: 80vh; /* 75% of viewport height */
     border-radius: 8px;
-    box-shadow: 0 0 10px grey;
-    max-width: 180px;
-
-}
-.cafe-legend span{
-    display: inline-block;
-    border-radius: 50%;
-    margin-right: 12px; /* adjusts space between the circles and the associated values*/
-    height: 15px;
-    width: 15px;
-    border: 1px solid #000000; /* adding borders so that the first cirtcle is visible */
+    border: 1px solid #000000;
 }
 
-.cafe-legend div:nth-child(3) span{ /* start with 3 because there are two items befo re the first class heading 4 and paragraph */
-    background-color: #ffffff;
-}
-.cafe-legend div:nth-child(4) span{
-    background-color: #fadcef;
-}
-.cafe-legend div:nth-child(5) span{
-    background-color: #feb6e2;
-}
-.cafe-legend div:nth-child(6) span{
-    background-color: #fa68c0;
-}
-.cafe-legend div:nth-child(7) span{
-    background-color: #e6008b;
+#Titled {
+    font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(212, 202, 202);
+    text-shadow: 2px 2px 2px rgb(2, 14, 20);
 }
