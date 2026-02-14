@@ -133,3 +133,14 @@ document.getElementById('next-btn').addEventListener('click', () => {
     currentIndex = (currentIndex + 1) % places.length;
     updateDisplay();
 });
+
+// Popup functionality
+document.getElementById('close-popup').addEventListener('click', () => {
+    document.getElementById('welcome-popup').style.display = 'none';
+    document.getElementById('popup-overlay').style.display = 'none';
+});
+
+document.getElementById('popup-overlay').addEventListener('click', () => {
+    document.getElementById('welcome-popup').style.display = 'none';
+    document.getElementById('popup-overlay').style.display = 'none';
+});
