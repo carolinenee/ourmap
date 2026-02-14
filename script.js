@@ -168,7 +168,7 @@ function showCompletionPopup() {
                 cursor: pointer;
                 color: #666;
                 padding: 5px 10px;
-            ">×</button>
+            ">×</button> 
             <h2 style="color: #091453; margin-bottom: 15px;">Finito!</h2>
             <p style="color: #333; line-height: 1.6;">
                 You Finished all ${places.length} places! But we both know there are many more... and there will be many more to come 💕
